@@ -28,13 +28,14 @@
             <div class="hero-content">
                 <!-- To separate, I used hero-left because the alternative using flex-wrap which would require a tad bit more math. I hate math -->
                     <div class="hero-left"> 
-                    <h1 class="hero-main-text">This website is awesome</h1>
-                    <p class="hero-subtext">This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.</p>
-                    <button class="signup-button">Sign up</button>
+                    <h1>This website is awesome</h1>
+                    <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.</p>
+                    <!-- use 2 classes, btn & hero-button as they are identical but diff in color -->
+                    <button class="btn hero-button">Sign up</button>
                 </div>
                 <!-- no need for right, its a single thing -->
-                <div class="hero-image-placeholder">
-                    this is a placeholder for an image
+                <div class="hero-image">
+                    <img src="./images/banner.jpg" alt="chessboard banner">
                 </div>
             </div>
         </div>
@@ -78,7 +79,7 @@
                     <h3>Call to action! It's time!</h3>
                     <p>Sign up for our product by clicking that button right over there!</p>
                 </div>
-                <button class="signup-button outline">Sign up</button>
+                <button class="btn cta-button">Sign up</button>
             </div>
         </div>
     </div>

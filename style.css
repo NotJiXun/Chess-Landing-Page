@@ -6,5 +6,130 @@
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
     display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* keep the footer at the bottom */
+}
+
+/* using group selector to make background color etc. same */
+.header-container, .hero-container{
+    background-color: #1F2937;
+    color: #f9faf8;
+}
+
+.header{
+    /* prevent logo and links from going too far, then centering them using margin */
+    max-width: 1000px;
+    margin: 0 auto; /* top and bottom 0, left and right auto center */
+    padding: 16px; /* dist from top of browser & logo/links */
+    /* separate the links and logo */
+    display: flex;  
+    justify-content: space-between; 
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.links{
+    /* remove bullet pts and set font size etc. */
+    list-style-type: none;
+    font-size: 18px;
+    display: flex; /* put them side by side */
+    gap: 16px;
+}
+
+.links a{
+    /* have to target anchor tag to remove underline */
+    text-decoration: none;
+    color: #e5e7eb; /* I don't know why but anchor tags don't inherit color from parent (.links) */
+}
+
+.main-content{
+    flex: 1; /* pushes the footer down to the bottom */
+    display: flex;
+    flex-direction: column; /* stack the content vertically */
+}
+
+.hero-container{
+    padding: 40px 0 100px 0; /* I originally used height, however upon googling, I realised padding is used more in web dev because a fixed height is bad across layouts(eg. mobile). I know TOP specified it doesn't have to be responsive, but still */
+}
+
+.hero-content{
+    /* put them side by side, center them*/
+    display: flex;
+    align-items: center;
+    
+    /* keep everything lined up vertically, then center using margin: 0 auto; */
+    /* technically we could put display: flex; justify-content: center; in .hero-container, but the logo and hero wouldn't match up nicely. Both use same max width and margin.*/
+    max-width: 1000px;
+    margin: 0 auto; 
+    width: 100%; /* ensures content takes its maximum width */
+    gap: 48px
+}
+
+.hero-left{
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /*separate the hero stuff a tad bit */
+    flex: 1; /* splits the left stuff from the right within 1000px */
+    max-width: 500px; /* keep the subtext within bounds */
+    align-items: flex-start; /* shrinks the button to fit "Sign up", this seemingly only affects the button as default text-align: left & h1,p are block elements */
+}
+
+.hero-left h1{
+    color: #f9faf8; /*why did the requirements specify this? its already white */
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.hero-left p{
+    color: #e5e7eb; 
+    font-size: 18px
+}
+
+
+.btn {
+    padding: 8px 32px;      
+    border-radius: 8px; /* once again, rounded corners */
+    font-weight: bold;
+    font-size: 16px;
+    border: none; /* removes the fuckass grey border */
+}
+
+.hero-button {
+    background-color: #3882f6;
+    color: white;
+}
+
+.cta-button {
+    background-color: #3882f6; 
+    color: white;
+    border: 2px solid white; /* white outline */
+}
+
+.hero-image {
+    flex: 1; /* splits the left stuff from the right within 1000px; */
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* make corners round */
+}
+
+
+
+
+
+.footer{
+    background-color: #1F2937;
+    color: #f9faf8;
+    /* center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
 }
