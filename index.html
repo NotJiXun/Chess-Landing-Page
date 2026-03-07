@@ -3,39 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction To Chess | Landing Page</title>
+    <title>Intro to Chess | Landing Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="dark-container">
-        <!-- dark-container use flex: 1; to push footer down -->
+    <!-- Dark blue section: header container & hero container -->
+     <!-- Header + links separated from hero text etc. -->
+    <div class="header-container">
         <div class="header">
-            <p>Header Logo</p>
-            <p class="links">Header link one</p>
-            <p class="links">Header link two</p>
-            <p class="links">Header link three</p>
-            </div>
-        <div class="herotext">
-            <p class="awesome">This website is awesome!</p>
-            <p class="subtext">Subtext with smaller font and lower constrast.</p>
-            <p class="button">Sign up</p>
-            <div class="Image">
-                <p class="Replace this with image later"
-            </div>   
+            <div class="logo">Cyber Chess Organization</div>
+            <ul class="links">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Events</a></li>
+            </ul>
         </div>
     </div>
-    <div class="middle">
-        <!-- white space including grey(quote) -->
-        <p class="middle-header">Some random information.</p>
+
+    <!-- I use a main content wrapper to make sure footer & body are separated using flex: 1; -->
+    <div class="main-content">
+
+        <!-- We will use grouping selector for both header-container and hero-container as they both belong in same color section -->
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- To separate, I used hero-left because the alternative using flex-wrap which would require a tad bit more math. I hate math -->
+                    <div class="hero-left"> 
+                    <h1 class="hero-main-text">This website is awesome</h1>
+                    <p class="hero-subtext">This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.</p>
+                    <button class="signup-button">Sign up</button>
+                </div>
+                <!-- no need for right, its a single thing -->
+                <div class="hero-image-placeholder">
+                    this is a placeholder for an image
+                </div>
+            </div>
+        </div>
+
+        <!-- Information and cards/boxes -->
+        <div class="info-section">
+            <h2 class="info-header">Some random information.</h2>
+            <!-- create container for the 4 cards/boxes -->
+            <div class="card-container">
+                <div class="card">
+                    <div class="box"></div>
+                    <p class="card-text">this is some subtext under an illustration or image</p>
+                </div>
+                <div class="card">
+                    <div class="box"></div>
+                    <p class="card-text">this is some subtext under an illustration or image</p>
+                </div>
+                <div class="card">
+                    <div class="box"></div>
+                    <p class="card-text">this is some subtext under an illustration or image</p>
+                </div>
+                <div class="card">
+                    <div class="box"></div>
+                    <p class="card-text">this is some subtext under an illustration or image</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote section  -->
+        <div class="quote-section">
+            <div class="quote-content">
+                <p class="quote-text">This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</p>
+                <p class="quote-author">-Thor, God of Thunder</p>
+            </div>
+        </div>
+
+        <!-- Call to action -->
+        <div class="cta-section">
+            <div class="cta-banner">
+                <div class="cta-text">
+                    <h3>Call to action! It's time!</h3>
+                    <p>Sign up for our product by clicking that button right over there!</p>
+                </div>
+                <button class="signup-button outline">Sign up</button>
+            </div>
+        </div>
+    </div>
+    <!-- End of main content wrapper -->
 
 
-
-
-
+    <div class="footer">
+        <p>Copyright © The Cyber Chess Organization</p>
     </div>
 
-
-    
 </body>
 </html>
