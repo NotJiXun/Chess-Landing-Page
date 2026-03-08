@@ -1,5 +1,5 @@
 # Chess-Landing-Page
-A mini website projectthat utilizes basic HTML, CSS and Flexbox!
+A mini website project that utilizes basic HTML, CSS and Flexbox!
 
 
 # Image Credits

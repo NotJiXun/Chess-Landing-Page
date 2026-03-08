@@ -1,14 +1,12 @@
-/* Ensure padding & borders stay inside width we set */
-* {
+/* ensure padding & borders stay inside width we set */
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
+body{
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh; /* keep the footer at the bottom */
 }
 
@@ -49,8 +47,6 @@ body {
 
 .main-content{
     flex: 1; /* pushes the footer down to the bottom */
-    display: flex;
-    flex-direction: column; /* stack the content vertically */
 }
 
 .hero-container{
@@ -67,7 +63,7 @@ body {
     max-width: 1000px;
     margin: 0 auto; 
     width: 100%; /* ensures content takes its maximum width */
-    gap: 48px
+    gap: 48px /* gap between text,buttons and image */
 }
 
 .hero-left{
@@ -87,42 +83,135 @@ body {
 
 .hero-left p{
     color: #e5e7eb; 
-    font-size: 18px
+    font-size: 18px;
 }
 
 
-.btn {
+.btn{
     padding: 8px 32px;      
     border-radius: 8px; /* once again, rounded corners */
     font-weight: bold;
     font-size: 16px;
-    border: none; /* removes the fuckass grey border */
+    border: none; /* removes the grey border */
 }
 
-.hero-button {
+.hero-button{
     background-color: #3882f6;
     color: white;
 }
 
-.cta-button {
-    background-color: #3882f6; 
-    color: white;
-    border: 2px solid white; /* white outline */
-}
-
-.hero-image {
+.hero-image{
     flex: 1; /* splits the left stuff from the right within 1000px; */
 }
 
-.hero-image img {
-    width: 100%;
+.hero-image img{
+    width: 100%;  
     height: auto;
     border-radius: 8px; /* make corners round */
 }
 
+.info-section{
+    display: flex;
+    flex-direction: column;
+    /* center the stuff */
+    align-items: center;
+    padding: 64px; /* vertical section space */
+    gap: 48px; /* separate title and cards/boxes */ 
+}
 
+.info-header{
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 900;
+}
 
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px; 
+    gap: 48px; /* separate cards and text more obviously */
+}
 
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    /* set width & height of box */
+    width: 200px;
+    height: 200px;
+
+    border: 4px solid #3882f6; 
+    border-radius: 15px;      
+    margin-bottom: 10px; /* separate box from text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box img{
+    width: 80%; /* use 80 instead of 100, to keep the image within box, while working together with justify-content and align-items to center it */
+}
+
+.card-text{
+    text-align: center;
+    color: grey;
+    font-size: 18px;
+}
+
+.quote-section{
+    width: 100%;    
+    background-color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    padding: 100px; 
+}
+
+.quote-content{
+    max-width: 800px;
+}
+
+.quote-text{
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+    color: #1f2937;
+}
+
+.quote-author{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right; /*separate name */
+    margin-top: 10px; /* separate name */
+}
+
+.cta-section{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+.cta-banner {
+    background-color: #3882f6;
+    color: white;
+    padding: 48px 100px;/*box padding */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between; /* text left, button right */
+    align-items: center;
+    width: 1000px; 
+}
+
+.cta-button {
+    border: 2px solid white; 
+    background-color: #3882f6;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+}
 
 .footer{
     background-color: #1F2937;
